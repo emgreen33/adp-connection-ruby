@@ -30,7 +30,7 @@ module Adp
             if self.connection_configuration.nil?
                 raise ConnectionException, "Configuration is empty or not found"
             end
-
+            Log.debug("access token = #{get_access_token()}")
             self.access_token = get_access_token()
         end
 
